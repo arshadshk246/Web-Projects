@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    overflow-y: hidden;
+    background-color: rgb(141, 104, 214);
+    overflow-x: hidden;
+}
+
+
+.surface {
+    height: 1001px;
+    width: 500%;
+    background-image: url("../images/road.jpg");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-repeat: repeat-x;
+}
+
+.car {
+    position: absolute;
+    bottom: .1%;
+    left: 14%;
+    
+}
+
+@keyframes moveRight {
+    100%{
+        transform: translateX(-2950px)
+    }
+}
+
+@keyframes suspension{
+    100%{
+        transform: translateY(-1px);
+    }
+    
+    50% {
+        transform: translateY(2px);
+    }
+    
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
+.moveRightAnimation {
+    animation: moveRight 2s linear infinite;
+}
+
+.start {
+    animation: suspension 1s linear infinite;
+}
